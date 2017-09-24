@@ -7,7 +7,8 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
-import org.vaslabs.github.independent.*;
+import org.vaslabs.github.immutables.*;
+import org.vaslabs.github.immutables.PrivateInterface;
 
 /**
  * Created by vnicolaou on 01/09/17.

@@ -1,4 +1,4 @@
-package org.vaslabs.github.json;
+package org.vaslabs.github.lombok;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableList;
@@ -9,7 +9,7 @@ import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestJsonObjects {
+public class TestLombokObjects {
 
     ObjectMapper objectMapper = JacksonMapper.objectMapper();
 

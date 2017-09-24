@@ -1,4 +1,4 @@
-package org.vaslabs.github.independent;
+package org.vaslabs.github.immutables;
 
 import com.google.common.base.Preconditions;
 import org.immutables.value.Value;

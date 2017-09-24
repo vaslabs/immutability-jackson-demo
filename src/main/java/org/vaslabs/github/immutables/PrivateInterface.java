@@ -1,4 +1,4 @@
-package org.vaslabs.github.independent;
+package org.vaslabs.github.immutables;
 
 import org.immutables.value.Value;
 import org.vaslabs.github.immutables.FluentStyle;

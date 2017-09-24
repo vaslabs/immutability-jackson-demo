@@ -1,6 +1,6 @@
 package org.vaslabs.github;
 
-import org.vaslabs.github.independent.Repo;
+import org.vaslabs.github.immutables.Repo;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
