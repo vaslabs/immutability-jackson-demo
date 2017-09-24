@@ -12,9 +12,9 @@ public class JacksonMapper {
     public static ObjectMapper objectMapper() {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-        objectMapper.disable(DeserializationFeature.FAIL_ON_MISSING_CREATOR_PROPERTIES);
         objectMapper.registerModule(new ParameterNamesModule());
         return objectMapper;
     }
+
 
 }

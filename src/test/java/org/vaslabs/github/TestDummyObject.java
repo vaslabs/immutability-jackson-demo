@@ -19,7 +19,7 @@ public class TestDummyObject {
 
     @Test
     public void testDummy() throws IOException {
-        DummyObject dummyObject = ImmutableDummyObject.of("dummy", 10);
+        DummyObject dummyObject = DummyObject.of("dummy", 10);
         String json = objectMapper.writeValueAsString(dummyObject);
         DummyObject recoveredDummyObject = objectMapper.readValue(json, DummyObject.class);
         assertEquals(dummyObject, recoveredDummyObject);
@@ -40,10 +40,10 @@ public class TestDummyObject {
     @Test
     public void testPrivateInterfacePattern() throws IOException {
         System.out.println(objectMapper.writeValueAsString(
-                ImmutableFoo.of("my foo")));
-        assertEquals(ImmutableFoo.of("my foo"),
+                Foo.of("my foo")));
+        assertEquals(Foo.of("my foo"),
                 objectMapper.readValue(objectMapper.writeValueAsString(
-                ImmutableFoo.of("my foo")), PrivateInterface.fooBar()));
+                Foo.of("my foo")), PrivateInterface.fooBar()));
     }
 
 }

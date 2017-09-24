@@ -9,10 +9,9 @@ import java.io.Serializable;
 /**
  * Created by vnicolaou on 01/09/17.
  */
-@JsonSerialize(as = ImmutableDummyObject.class)
-@JsonDeserialize(as = ImmutableDummyObject.class)
+@JsonStyle
 @Value.Immutable
-public abstract class DummyObject implements Serializable {
+public abstract class AbstractDummyObject implements Serializable {
 
     @Value.Parameter
     public abstract String name();
