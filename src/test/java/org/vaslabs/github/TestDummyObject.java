@@ -2,6 +2,7 @@ package org.vaslabs.github;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
+import org.vaslabs.github.independent.*;
 import org.vaslabs.github.json.NonIntrusiveJacksonMapper;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
@@ -39,11 +40,13 @@ public class TestDummyObject {
 
     @Test
     public void testPrivateInterfacePattern() throws IOException {
-        System.out.println(objectMapper.writeValueAsString(
-                Foo.of("my foo")));
         assertEquals(Foo.of("my foo"),
                 objectMapper.readValue(objectMapper.writeValueAsString(
                 Foo.of("my foo")), PrivateInterface.fooBar()));
+
+        assertEquals(Bar.of("my bar"),
+                objectMapper.readValue(objectMapper.writeValueAsString(
+                        Bar.of("my bar")), PrivateInterface.fooBar()));
     }
 
 }

@@ -1,4 +1,4 @@
-package org.vaslabs.github;
+package org.vaslabs.github.independent;
 
 import org.immutables.value.Value;
 
@@ -9,7 +9,7 @@ import java.io.Serializable;
  */
 @FluentStyle
 @Value.Immutable
-public abstract class AbstractDummyObject implements Serializable {
+public abstract class AbstractDummyObject {
 
     @Value.Parameter
     public abstract String name();

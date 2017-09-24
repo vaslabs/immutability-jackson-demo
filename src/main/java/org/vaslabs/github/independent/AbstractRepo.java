@@ -1,6 +1,5 @@
-package org.vaslabs.github;
+package org.vaslabs.github.independent;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import org.immutables.value.Value;
 
 /**

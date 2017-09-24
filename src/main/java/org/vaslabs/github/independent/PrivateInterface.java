@@ -1,5 +1,4 @@
-package org.vaslabs.github;
-
+package org.vaslabs.github.independent;
 
 import org.immutables.value.Value;
 

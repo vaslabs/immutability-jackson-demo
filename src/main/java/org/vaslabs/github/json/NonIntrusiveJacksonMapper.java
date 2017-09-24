@@ -7,7 +7,7 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
-import org.vaslabs.github.*;
+import org.vaslabs.github.independent.*;
 
 /**
  * Created by vnicolaou on 01/09/17.
@@ -44,8 +44,8 @@ public class NonIntrusiveJacksonMapper {
         @JsonProperty("information") public abstract String information();
     }
 
-    @JsonDeserialize(as = Foo.class)
-    @JsonSerialize(as = Foo.class)
+    @JsonDeserialize(as = Bar.class)
+    @JsonSerialize(as = Bar.class)
     public abstract static class BarMixin {
         @JsonProperty("information") public abstract String information();
     }
