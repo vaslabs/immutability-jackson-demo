@@ -2,7 +2,7 @@ package org.vaslabs.github;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
-import org.vaslabs.github.json.JacksonMapper;
+import org.vaslabs.github.json.NonIntrusiveJacksonMapper;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 
@@ -15,7 +15,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class TestDummyObject {
 
-    ObjectMapper objectMapper = JacksonMapper.objectMapper();
+    ObjectMapper objectMapper = NonIntrusiveJacksonMapper.objectMapper();
 
     @Test
     public void testDummy() throws IOException {
