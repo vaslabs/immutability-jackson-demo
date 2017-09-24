@@ -1,9 +1,10 @@
-package org.vaslabs.github;
+package org.vaslabs.github.independent;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
+import org.vaslabs.github.GithubService;
 import org.vaslabs.github.independent.*;
-import org.vaslabs.github.json.NonIntrusiveJacksonMapper;
+import org.vaslabs.github.jackson.NonIntrusiveJacksonMapper;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 
@@ -14,7 +15,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by vnicolaou on 01/09/17.
  */
-public class TestDummyObject {
+public class TestIndependentObjects {
 
     ObjectMapper objectMapper = NonIntrusiveJacksonMapper.objectMapper();
 

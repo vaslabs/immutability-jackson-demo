@@ -1,4 +1,4 @@
-package org.vaslabs.github.json;
+package org.vaslabs.github.jackson;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -12,7 +12,11 @@ import org.vaslabs.github.independent.*;
 /**
  * Created by vnicolaou on 01/09/17.
  */
-public class NonIntrusiveJacksonMapper {
+public final class NonIntrusiveJacksonMapper {
+
+
+    private NonIntrusiveJacksonMapper(){ throw new AssertionError("No instance here");}
+
 
     public static ObjectMapper objectMapper() {
         ObjectMapper objectMapper = new ObjectMapper();

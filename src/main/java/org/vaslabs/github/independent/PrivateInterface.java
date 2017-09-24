@@ -1,6 +1,7 @@
 package org.vaslabs.github.independent;
 
 import org.immutables.value.Value;
+import org.vaslabs.github.immutables.FluentStyle;
 
 public class PrivateInterface {
 

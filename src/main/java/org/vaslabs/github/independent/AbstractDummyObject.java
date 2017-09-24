@@ -1,19 +1,28 @@
 package org.vaslabs.github.independent;
 
+import com.google.common.base.Preconditions;
 import org.immutables.value.Value;
-
-import java.io.Serializable;
+import org.vaslabs.github.immutables.FluentStyle;
 
 /**
  * Created by vnicolaou on 01/09/17.
  */
 @FluentStyle
 @Value.Immutable
-public abstract class AbstractDummyObject {
+abstract class AbstractDummyObject {
 
     @Value.Parameter
     public abstract String name();
     @Value.Parameter
     public abstract int size();
+
+    @Value.Check
+    protected void check() {
+        Preconditions.checkArgument(
+                name() != null && !name().isEmpty(),
+                "Name must not be null or empty"
+        );
+    }
+
 
 }

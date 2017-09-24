@@ -1,4 +1,4 @@
-package org.vaslabs.github.independent;
+package org.vaslabs.github.immutables;
 
 import org.immutables.value.Value;
 
@@ -7,4 +7,4 @@ import org.immutables.value.Value;
         typeAbstract = "Abstract*",
         typeImmutable = "*",
         visibility = Value.Style.ImplementationVisibility.PUBLIC)
-@interface FluentStyle{}
+public @interface FluentStyle{}
