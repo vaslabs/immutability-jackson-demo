@@ -24,7 +24,6 @@ public final class NonIntrusiveJacksonMapper {
         objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         objectMapper.registerModule(new ParameterNamesModule());
         objectMapper.addMixIn(PrivateInterface.fooBar(), PrivateInterfaceMixin.class);
-        objectMapper.setPropertyNamingStrategy(PropertyNamingStrategy.LOWER_CAMEL_CASE);
         objectMapper.addMixIn(DummyObject.class, DummyObjectMixin.class);
         objectMapper.addMixIn(Repo.class, RepoMixin.class);
         objectMapper.addMixIn(Foo.class, FooMixin.class);
