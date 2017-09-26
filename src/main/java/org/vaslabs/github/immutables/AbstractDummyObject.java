@@ -2,8 +2,6 @@ package org.vaslabs.github.immutables;
 
 import com.google.common.base.Preconditions;
 import org.immutables.value.Value;
-import org.vaslabs.github.immutables.FluentStyle;
-
 /**
  * Created by vnicolaou on 01/09/17.
  */
@@ -23,6 +21,4 @@ abstract class AbstractDummyObject {
                 "Name must not be null or empty"
         );
     }
-
-
 }

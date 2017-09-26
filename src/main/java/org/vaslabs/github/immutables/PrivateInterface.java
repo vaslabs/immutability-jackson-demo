@@ -1,9 +1,11 @@
 package org.vaslabs.github.immutables;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import lombok.EqualsAndHashCode;
 import org.immutables.value.Value;
-import org.vaslabs.github.immutables.FluentStyle;
 
 public class PrivateInterface {
+
 
     private interface FooBar {}
 
@@ -23,8 +25,18 @@ public class PrivateInterface {
 
     }
 
-    public static Class<FooBar> fooBar() {
-        return FooBar.class;
+
+    @EqualsAndHashCode
+    static class PolymorphicContainer {
+        public final FooBar fooOrBar;
+        @JsonCreator
+        PolymorphicContainer(FooBar fooOrBar) {
+            this.fooOrBar = fooOrBar;
+        }
     }
 
+
+    public static Class<?> fooBar() {
+        return FooBar.class;
+    }
 }

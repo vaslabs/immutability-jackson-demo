@@ -24,7 +24,6 @@ public class TestImmutablesObjects {
         String json = objectMapper.writeValueAsString(dummyObject);
         DummyObject recoveredDummyObject = objectMapper.readValue(json, DummyObject.class);
         assertEquals(dummyObject, recoveredDummyObject);
-
     }
 
     @Test
@@ -40,13 +39,22 @@ public class TestImmutablesObjects {
 
     @Test
     public void testPrivateInterfacePattern() throws IOException {
-        assertEquals(Foo.of("my foo"),
+        PrivateInterface.PolymorphicContainer polymorphicContainer
+                = new PrivateInterface.PolymorphicContainer(Foo.of("my foo"));
+        assertEquals(polymorphicContainer,
                 objectMapper.readValue(objectMapper.writeValueAsString(
-                Foo.of("my foo")), PrivateInterface.fooBar()));
+                polymorphicContainer), PrivateInterface.PolymorphicContainer.class));
 
-        assertEquals(Bar.of("my bar"),
-                objectMapper.readValue(objectMapper.writeValueAsString(
-                        Bar.of("my bar")), PrivateInterface.fooBar()));
+        polymorphicContainer
+                = new PrivateInterface.PolymorphicContainer(Bar.of("my bar"));
+        assertEquals(
+                polymorphicContainer,
+                objectMapper.readValue(
+                        objectMapper.writeValueAsString(polymorphicContainer),
+                        PrivateInterface.PolymorphicContainer.class
+                )
+        );
+
     }
 
 }
