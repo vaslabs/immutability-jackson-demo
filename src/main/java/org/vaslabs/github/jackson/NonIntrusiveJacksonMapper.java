@@ -65,8 +65,8 @@ public final class NonIntrusiveJacksonMapper {
             include = JsonTypeInfo.As.PROPERTY,
             property = "type")
     @JsonSubTypes({
-            @JsonSubTypes.Type(value = Foo.class, name = "Bar"),
-            @JsonSubTypes.Type(value = Bar.class, name = "Foo") })
+            @JsonSubTypes.Type(value = Foo.class, name = "Foo"),
+            @JsonSubTypes.Type(value = Bar.class, name = "Bar") })
     public static class PrivateInterfaceMixin {
     }
 }
